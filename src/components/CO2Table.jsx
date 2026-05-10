@@ -18,7 +18,8 @@ const CO2Table = ({data) => {
           {data.map((landGruppe)=>(
               <React.Fragment key={landGruppe.id}> {/*gruppiert die Elemente, dass es nur ein Root-element gibt//1. Element der äußeren map Schleife braucht einen key, unterscheidet Länderblöcke*/}
                 {landGruppe.unternehmen.map((u, i) => (
-                  <tr key={u.id}>{/*unterscheidet Unternehmen innerhalb eines Landes z.B. 0-1, 0-2..., $=Platzhalter => jetzt kommt JS-Code*/}
+                  return(
+                    <tr key={u.id}>{/*unterscheidet Unternehmen innerhalb eines Landes z.B. 0-1, 0-2..., $=Platzhalter => jetzt kommt JS-Code*/}
                     {i === 0 && (
                       <td rowSpan={landGruppe.unternehmen.length} className="align-middle fw-bold">{/*rawSpan gibt an über wie viel Zeilen sich eine Zelle erstrecken soll, in diesem Fall über die anzahl der Unternehmen eines Landes*/ }
                         {landGruppe.land}
@@ -32,7 +33,7 @@ const CO2Table = ({data) => {
                       </td>
                     )}
                   </tr>
-                ))}
+                )))}
               </React.Fragment>
             );
           })}
