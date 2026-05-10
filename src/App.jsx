@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Table, Container } from "react-bootstrap";
 import MyNavbar from "./components/MyNavbar";
 import CO2Table from "./components/CO2Table";
+import SearchBar from "./components/SearchBar";
+import Header from "./components/SearchHeader";
 
 function App() {
   return (
