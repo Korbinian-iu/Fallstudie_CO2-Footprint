@@ -1,0 +1,52 @@
+[
+    {
+      "land": "USA",
+      "unternehmen": [
+        {"name": "U1","emission": 10},
+        {"name": "U2","emission": 45},
+        {"name": "U3","emission": 37},
+        {"name": "U4","emission": 87},
+        {"name": "U5","emission": 56}
+      ]
+    },
+     {
+      "land": "China",
+      "unternehmen": [
+        {"name": "C1","emission": 100},
+        {"name": "C2","emission": 49},
+        {"name": "C3","emission": 137},
+        {"name": "C4","emission": 97},
+        {"name": "C5","emission": 156}
+      ]
+    },
+    {
+      "land": "Indien",
+      "unternehmen": [
+        {"name": "I1","emission": 99},
+        {"name": "I2","emission": 23},
+        {"name": "I3","emission": 24},
+        {"name": "I4","emission": 25},
+        {"name": "I5","emission": 26}
+      ]
+    },
+    {
+      "land": "Brasilien",
+      "unternehmen": [
+        {"name": "B1","emission": 55},
+        {"name": "B2","emission": 21},
+        {"name": "B3","emission": 321},
+        {"name": "B4","emission": 66},
+        {"name": "B5","emission": 67}
+      ]
+    },
+    {
+      "land": "Deutschland",
+      "unternehmen": [
+        {"name": "D1","emission": 3},
+        {"name": "D2","emission": 29},
+        {"name": "D3","emission": 49},
+        {"name": "D4","emission": 7},
+        {"name": "D5","emission": 69}
+      ]
+    }
+]

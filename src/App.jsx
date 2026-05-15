@@ -6,12 +6,21 @@ import CO2RankTable from "./components/CO2SortTable";
 import emissionsData from "./data/emissionsData";
 import { FilterSuche } from "./components/SortFilter";
 import Header from "./components/SearchHeader";
+import Footer from "./components/Footer";
 
 function App() {
   // const [filteredData, setFilteredData] = useState(emissionsData);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // Standard: Aufsteigend A-Z
   const [sortByEmission, setSortByEmission] = useState(false);
+  const datenMitIds = emissionsData.map((landGruppe, landIdx) => ({
+    ...landGruppe,
+    id: `land-${landIdx}`, // Generiert z.B. land-0, land-1
+    unternehmen: landGruppe.unternehmen.map((u, uIdx) => ({
+      ...u,
+      id: `u-${landIdx}-${uIdx}`, // Generiert eindeutige ID wie u-0-1
+    })),
+  }));
   // 2. Die Suchfunktion aktualisiert jetzt einfach direkt den Such-State
   const handleSearch = (value) => {
     setSearchTerm(value); // Hier wird setSearchTerm nun korrekt verwendet!
@@ -78,7 +87,7 @@ function App() {
             und rendert automatisch die CO2Table!
           */}
           <FilterSuche
-            data={emissionsData}
+            data={datenMitIds}
             searchTerm={searchTerm}
             sortOrder={sortOrder}
             sortByEmission={sortByEmission}
@@ -86,6 +95,7 @@ function App() {
         </main>
       </div>
       <p>Lorem, ipsum dolor.</p>
+      <Footer />
     </>
   );
 }
